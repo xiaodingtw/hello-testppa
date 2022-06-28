@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    install)
+        # do some magic
+	echo "this is a test from Chun-Ting Ding"
+        ;;
+
+    upgrade|abort-upgrade)
+        ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 0
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0
